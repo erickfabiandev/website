@@ -1,6 +1,6 @@
 import './App.scss'
 import Home from './components/Home/Home'
-import Heard from './components/heard/Heard'
+import Heard from './components/Heard/Heard'
 
 function App() {
 
