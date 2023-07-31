@@ -76,6 +76,7 @@
           text-align: left;
           transition: .6s;
           &:hover{
+            cursor: pointer;
             color: variables.$color-yellow;
             letter-spacing: 2px;
           }

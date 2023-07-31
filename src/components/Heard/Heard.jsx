@@ -1,7 +1,8 @@
 import './Heard.scss'
 import { AiOutlineMenuUnfold, AiOutlineClose, AiFillHome, AiFillFileZip} from "react-icons/ai"
 import { HiMiniAcademicCap } from "react-icons/hi2";
-import { MdContactSupport, MdDarkMode, MdLightMode } from "react-icons/md"
+import { MdContactSupport } from "react-icons/md"
+import { BsFillLightbulbFill, BsFillLightbulbOffFill } from "react-icons/bs";
 import { useContext, useState } from 'react'
 import { ThemeContext } from '../../store/ThemeContext'
 const Heard =()=>{
@@ -45,7 +46,7 @@ const Heard =()=>{
             <a className='option_text' href="#">Contact</a>
           </li>
           <li className='option'>
-            {modeDark? <MdLightMode size ={25} onClick={handleTheme}/> :<MdDarkMode size={25} onClick={handleTheme}/>}            
+            {modeDark? <BsFillLightbulbOffFill size ={25} onClick={handleTheme}/> :<BsFillLightbulbFill size={25} onClick={handleTheme}/>}            
           </li>
         </ul>
         <p></p>
