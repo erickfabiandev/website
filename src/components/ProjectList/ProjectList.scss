@@ -1,0 +1,62 @@
+@use '../../styles/abstract/variables.scss';
+
+.project-list {
+  height: 80vh;
+
+  &__heard {
+    text-align: center;
+    padding: 4rem 0rem;
+    position: relative;
+
+    &__title {
+      font-size: 58px;
+      font-family: variables.$font-PermanentMarker;
+      color: #0a141d18;
+      view-timeline-name: --revealing-text;
+      view-timeline-axis: block;
+
+      animation-name: fadeInUp;
+      animation-timing-function: ease;
+      animation-fill-mode: both;
+      animation-timeline: --revealing-text;
+      animation-range: entry 25% cover 50%;
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          scale: 25%
+        }
+
+        to {
+          opacity: 1;
+          scale: 100%
+        }
+      }
+    }
+
+    &__subtitle {
+      position: absolute;
+      font-size: 24px;
+      color: variables.$color-yellow;
+      font-family: variables.$font-PermanentMarker;
+      top: 40%;
+      left: 40%;
+
+    }
+  }
+}
+
+@media (min-width:1024px) {
+  .project-list {
+    &__heard {
+      &__title {
+        font-size: 80px;
+      }
+
+      &__subtitle {
+        left: 45%;
+      }
+    }
+  }
+
+}

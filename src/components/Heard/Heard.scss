@@ -1,5 +1,6 @@
 @use '../../styles/abstract/variables';
-.heard{
+
+.heard {
   padding: 0.3rem 1rem;
   position: sticky;
   top: 0;
@@ -8,41 +9,46 @@
   height: 4rem;
   z-index: 100;
   backdrop-filter: blur(20px);
-  background: hsla(0,0%,100%,.73);
+  background: hsla(0, 0%, 100%, .73);
   opacity: 1;
 
-  .visibility{
-    display: none;  
+  .visibility {
+    display: none;
   }
-  &__main{
+
+  &__main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;    
-    &__logo{
-      width: 40%;      
+    justify-content: space-between;
+
+    &__logo {
+      width: 40%;
     }
-    &--button{
-      .icon{
+
+    &--button {
+      .icon {
         color: variables.$color-gray ;
-      }      
+      }
     }
   }
-  &__body{
+
+  &__body {
     display: flex;
     flex-direction: row;
-    justify-content:flex-end;
-    align-items: start; 
-    gap: 10px;  
+    justify-content: flex-end;
+    align-items: start;
+    gap: 10px;
     position: fixed;
     top: 0;
-    right: 0;   
-    background: rgba(0, 0, 0 ,0.8);
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
     width: 100%;
 
-    &--button{
+    &--button {
       margin-top: 1rem;
-      .icon{        
+
+      .icon {
         background-color: #FDFEFE;
         color: variables.$color-gray ;
         border-radius: 50%;
@@ -50,32 +56,34 @@
       }
     }
 
-    &--options{      
+    &--options {
       display: flex;
       flex-direction: column;
-      height: 100vh;      
+      height: 100vh;
       padding: 0.5rem;
       background-color: #FDFEFE;
       background-image: url('https://res.cloudinary.com/dkddd5aky/image/upload/v1690450434/site-web/Fondo_dgpvgs.webp');
-      background-size:cover;    
+      background-size: cover;
       width: 60%;
 
-      .logo{
-        width: 100%; 
+      .logo {
+        width: 100%;
       }
 
-      .options{
-        padding-top: 1.5rem;           
-        .option{
+      .options {
+        padding-top: 1.5rem;
+
+        .option {
           display: flex;
-          gap: 5px;          
+          gap: 5px;
           font-family: variables.$font-PermanentMarker;
-          color: variables.$color-gray;         
+          color: variables.$color-gray;
           font-size: 16px;
           padding: 0.5rem 0.5rem;
           text-align: left;
           transition: .6s;
-          &:hover{
+
+          &:hover {
             cursor: pointer;
             color: variables.$color-yellow;
             letter-spacing: 2px;
@@ -87,91 +95,107 @@
 }
 
 @media (min-width: 576px) {
-  .heard{
-    height: 5.2rem;   
-    &__main{
-      &__logo{
-        width: 30%;      
+  .heard {
+    height: 5.2rem;
+
+    &__main {
+      &__logo {
+        width: 30%;
       }
-      &--button{
-        .icon{
+
+      &--button {
+        .icon {
           height: 40px;
           width: 40px;
-        }      
+        }
       }
     }
-    &__body{
-      &--options{
+
+    &__body {
+      &--options {
         width: 30%;
-      }  
+      }
     }
   }
 }
 
 @media (min-width: 768px) {
-  .heard{  
-    &__main{
-      &__logo{
-        width: 25%;      
+  .heard {
+    &__main {
+      &__logo {
+        width: 25%;
       }
     }
   }
 }
 
 @media (min-width:1024px) {
-  .heard{   
+  .heard {
     height: 5rem;
 
-    .visibility{
+    .visibility {
       display: flex;
     }
-    &__main{
+
+    &__main {
       display: none;
     }
-    &__body{
-      display: flex;      
-      justify-content:center;
-      align-items:center;
+
+    &__body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: none;
-      position:initial;
-      &--button{
+      position: initial;
+
+      &--button {
         display: none;
       }
-      &--options{
-        justify-content: space-between;  
-        background: none;        
+
+      &--options {
+        justify-content: space-between;
+        background: none;
         flex-direction: row;
         height: auto;
         width: 100%;
         padding: 0rem 4rem;
-        .logo{
-          width: 20%; 
+
+        .logo {
+          width: 200px;
         }
-        .options{
+
+        .options {
           display: flex;
           flex-direction: row;
           align-items: center;
-          padding: 0rem;          
+          padding: 0rem;
           padding-left: 15rem;
-          .option{
+
+          .option {
             padding-left: 2rem;
-            &_icon{
+
+            &_icon {
               display: none;
             }
           }
-        } 
+        }
       }
     }
-  }  
+  }
 }
-  
-@media (min-width:1440px){
-  .heard{
+
+@media (min-width:1440px) {
+  .heard {
     height: 7rem;
-    &__body{
-      &--options{
-        .options{
-          .option{              
+
+    &__body {
+      &--options {
+        .logo {
+          width: 250px;
+        }
+
+        .options {
+          .option {
             font-size: 20px;
           }
         }

@@ -1,6 +1,6 @@
 @use '../../styles/abstract/variables.scss';
 
-.footer{
+.footer {
   background-color: variables.$color-yellow-2;
   width: 100%;
   display: flex;
@@ -8,10 +8,25 @@
   align-items: center;
   justify-content: center;
   height: 4rem;
-  color: #4D5656 ;
-  &__text{
+  color: #4D5656;
+  position: relative;
+
+  &__text {
     padding-left: 0.5rem;
     font-family: variables.$font-PermanentMarker;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: -79px 0;
+    height: 80px;
+    background-size: contain;
+    background-image: url('https://res.cloudinary.com/dkddd5aky/image/upload/v1691295777/site-web/footer-sp_ptp0ia.webp');
+    background-position: 0 0;
   }
 
 }

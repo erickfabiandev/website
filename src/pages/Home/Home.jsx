@@ -2,11 +2,13 @@ import './Home.scss'
 import { BsLinkedin, BsGithub, BsFillRocketFill } from "react-icons/bs"
 import { useContext } from 'react'
 import { ThemeContext } from '../../store/ThemeContext'
+import ProjectList from '../../components/ProjectList/ProjectList'
 
 const Home = () => {  
   const { modeDark} = useContext(ThemeContext)
 
   return (
+    <>
     <div className={`home ${modeDark?'dark':''}`} id='home'>
       <img className='home__profile' alt='imageProfile' src='https://res.cloudinary.com/dkddd5aky/image/upload/v1690535615/site-web/Perfil_p63ej7.webp'/>
       <div className='home__information'>
@@ -31,6 +33,9 @@ const Home = () => {
            
       </div>      
     </div>
+    <ProjectList/>
+    </>
+    
   );
 };
 
