@@ -1,5 +1,6 @@
 @use '../../styles/abstract/variables.scss';
-.home{
+
+.home {
   height: auto;
   width: 100%;
   display: flex;
@@ -9,7 +10,7 @@
   position: relative;
   z-index: 1;
 
-  &:before{
+  &:before {
     z-index: -1;
     position: absolute;
     width: 100%;
@@ -19,20 +20,20 @@
     opacity: 0.23;
     content: '';
     filter: blur(2px);
-    background-size: cover;    
+    background-size: cover;
     background-image: url('https://res.cloudinary.com/dkddd5aky/image/upload/v1690450434/site-web/Fondo_dgpvgs.webp');
-    //background-size:cover;
-    //background-position:top;
   }
-  &__profile{
+
+  &__profile {
     height: 276px;
     width: 276px;
   }
-  &__information{
+
+  &__information {
     padding-top: 0.5rem;
     text-align: left;
 
-    &__title{
+    &__title {
       font-family: variables.$font-PermanentMarker;
       color: variables.$color-yellow;
       font-size: 24px;
@@ -40,7 +41,7 @@
       width: 320px;
       overflow: hidden;
 
-      .message{
+      .message {
         position: absolute;
         top: 0;
         left: 30px;
@@ -56,141 +57,169 @@
             top: 0;
             width: 0;
           }
+
           5% {
             width: 0;
           }
+
           15% {
             width: 100px;
           }
+
           30% {
             top: 0rem;
             width: 100px;
           }
+
           33% {
             top: 0rem;
             width: 0;
           }
+
           35% {
             top: 0rem;
             width: 0;
           }
+
           38% {
-            top: -2.2rem;            
+            top: -2.2rem;
           }
+
           48% {
             top: -2.2rem;
-            width: 80px;            
+            width: 80px;
           }
+
           62% {
             top: -2.2rem;
             width: 80px;
           }
+
           66% {
             top: -2.2rem;
             width: 0;
           }
+
           71% {
             top: -4.5rem;
             width: 0;
           }
+
           86% {
             top: -4.5rem;
             width: 150px;
           }
+
           95% {
             top: -4.5rem;
             width: 150px;
           }
+
           98% {
             top: -4.5rem;
             width: 0;
           }
+
           100% {
             top: 0;
             width: 0;
           }
         }
-      }      
+      }
     }
-    &__subtitle{
+
+    &__subtitle {
       font-family: variables.$font-PermanentMarker;
       color: variables.$color-yellow;
       font-size: 24px;
     }
-    &__post{      
+
+    &__post {
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
       font-family: variables.$font-PermanentMarker;
-      color:variables.$color-black;
-      font-size: 16px;    
+      color: variables.$color-black;
+      font-size: 16px;
     }
-    &__description{
+
+    &__description {
       font-family: variables.$font-IndieFlower;
       color: variables.$color-gray;
       font-size: 14px;
       font-weight: bold;
       line-height: 1.5;
     }
-    &__redes{
+
+    &__redes {
       padding-top: 1rem;
       color: variables.$color-gray;
       position: relative;
-      a{
+
+      a {
         padding-inline: 5px;
-        &:hover{
+
+        &:hover {
           cursor: pointer;
           color: variables.$color-yellow;
         }
       }
-      .rocket{
+
+      .rocket {
         position: absolute;
         bottom: -120%;
         left: 40%;
         color: variables.$color-yellow;
         animation: animateRocket 0.2s linear infinite;
+
         @keyframes animateRocket {
-          0%,100%{
-              transform: translate(0,0) rotate(180deg);
+
+          0%,
+          100% {
+            transform: translate(0, 0) rotate(180deg);
           }
-          50%{
-              transform: translate(0,3px) rotate(180deg);
+
+          50% {
+            transform: translate(0, 3px) rotate(180deg);
           }
+        }
+
       }
-        
-      }
-      
+
     }
   }
 }
 
 .dark {
   background-size: cover;
-  background-position:center;  
+  background-position: center;
   background-image: url('https://res.cloudinary.com/dkddd5aky/image/upload/v1690450434/site-web/Fondo_dgpvgs.webp');
-  &:before{
+
+  &:before {
     background-image: none;
-    opacity:1 ;
-    background-color: rgba(0,0,0,0.9);
-    filter: blur(0);   
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    filter: blur(0);
   }
-  .home__information__post{     
+
+  .home__information__post {
     color: variables.$color-gray;
-  }  
+  }
 }
 
-
-@media (min-width: 576px){
-  .home{
+@media (min-width: 576px) {
+  .home {
     flex-direction: row-reverse;
     justify-content: center;
     height: auto;
     padding: 3rem 2rem;
-    &:before{
+
+    &:before {
       background-position: center;
     }
-    &__information{
-      &__redes{
-        .rocket{          
+
+    &__information {
+      &__redes {
+        .rocket {
           bottom: -180%;
           left: 0%;
           right: 10%;
@@ -201,82 +230,100 @@
 }
 
 @media (min-width:768px) {
-  .home{
-    &__information{
-      &__description{
+  .home {
+    &__information {
+      &__description {
         padding-right: 2rem;
       }
     }
   }
 }
 
-@media (min-width:1024px){
-  .home{
+@media (min-width:1024px) {
+  .home {
     height: 80vh;
     padding: 3rem 4rem;
-    &__profile{
+
+    &__profile {
       height: 400px;
       width: 400px;
     }
-    &__information{
-      &__title{
+
+    &__information {
+      &__title {
         font-size: 36px;
-        .message{
+
+        .message {
           left: 40px;
+
           @keyframes openclose {
             0% {
               top: 0;
               width: 0;
             }
+
             5% {
               width: 0;
             }
+
             15% {
               width: 135px;
             }
+
             30% {
               top: 0rem;
               width: 135px;
             }
+
             33% {
               top: 0rem;
               width: 0;
             }
+
             35% {
               top: 0rem;
               width: 0;
             }
+
             38% {
-              top: -3.2rem;            
+              top: -3.2rem;
             }
+
             48% {
               top: -3.2rem;
-              width: 120px;            
+              width: 120px;
             }
+
             62% {
               top: -3.2rem;
               width: 120px;
             }
+
             66% {
               top: -3.2rem;
               width: 0;
             }
+
             71% {
               top: -6.4rem;
               width: 0;
             }
+
             86% {
               top: -6.4rem;
               width: 220px;
             }
+
             95% {
               top: -6.4rem;
               width: 220px;
             }
+
             98% {
               top: -6.4rem;
               width: 0;
             }
+
             100% {
               top: 0;
               width: 0;
@@ -284,17 +331,21 @@
           }
         }
       }
-      &__subtitle{
+
+      &__subtitle {
         font-size: 36px;
       }
-      &__post{
+
+      &__post {
         font-size: 18px;
       }
-      &__description{
+
+      &__description {
         font-size: 16px;
       }
-      &__redes{
-        .rocket{          
+
+      &__redes {
+        .rocket {
           bottom: -300%;
         }
       }
@@ -302,74 +353,92 @@
   }
 }
 
-@media (min-width:1440px){
-  .home{
+@media (min-width:1440px) {
+  .home {
     //height: 90vh;
     padding: 3rem 8rem;
-    &__profile{
+
+    &__profile {
       height: 500px;
       width: 500px;
     }
-    &__information{
-      &__title{
+
+    &__information {
+      &__title {
         font-size: 48px;
         width: 340px;
-        .message{
+
+        .message {
           left: 55px;
+
           @keyframes openclose {
             0% {
               top: 0;
               width: 0;
             }
+
             5% {
               width: 0;
             }
+
             15% {
               width: 180px;
             }
+
             30% {
               top: 0rem;
               width: 180px;
             }
+
             33% {
               top: 0rem;
               width: 0;
             }
+
             35% {
               top: 0rem;
               width: 0;
             }
+
             38% {
-              top: -4.4rem;            
+              top: -4.4rem;
             }
+
             48% {
               top: -4.4rem;
-              width: 150px;            
+              width: 150px;
             }
+
             62% {
               top: -4.4rem;
               width: 150px;
             }
+
             66% {
               top: -4.4rem;
               width: 0;
             }
+
             71% {
               top: -8.8rem;
               width: 0;
             }
+
             86% {
               top: -8.8rem;
               width: 300px;
             }
+
             95% {
               top: -8.8rem;
               width: 300px;
             }
+
             98% {
               top: -8.8rem;
               width: 0;
             }
+
             100% {
               top: 0;
               width: 0;
@@ -377,13 +446,16 @@
           }
         }
       }
-      &__subtitle{
+
+      &__subtitle {
         font-size: 48px;
       }
-      &__post{
+
+      &__post {
         font-size: 24px;
       }
-      &__description{
+
+      &__description {
         font-size: 20px;
         padding-right: 6rem;
       }

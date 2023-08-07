@@ -1,19 +1,20 @@
 * {
-    margin: 0;
-    padding: 0;    
-    box-sizing: border-box;
-  }  
-  a {
-    text-decoration: none;
-  }
-  
-  button {
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-  
- /* Desactivamos estilos por defecto de las principales etiquetas de texto */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
 h1,
 h2,
 h3,
@@ -36,7 +37,28 @@ em {
   color: inherit;
   margin: 0;
 }
-  /* Quitamos los puntos de los <li> */
+
+/* Quitamos los puntos de los <li> */
 li {
   list-style-type: none;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

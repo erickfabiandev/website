@@ -18,7 +18,7 @@ const Heard = () => {
   return (
     <header className='heard'>
       <div className='heard__main'>
-        <NavLink>
+        <NavLink to='/'>
           <img className='heard__main__logo' src='https://res.cloudinary.com/dkddd5aky/image/upload/v1690435139/site-web/Logo-1_fetwtx.webp' />
         </NavLink>
         <button className='heard__main--button' onClick={handleShow}>
@@ -30,7 +30,7 @@ const Heard = () => {
           <AiOutlineClose className='icon' size={35} />
         </button>
         <nav className='heard__body--options'>
-          <NavLink>
+          <NavLink to='/'>
             <img className='logo' src='https://res.cloudinary.com/dkddd5aky/image/upload/v1690435139/site-web/Logo-1_fetwtx.webp' />
           </NavLink>
           <ul className='options'>

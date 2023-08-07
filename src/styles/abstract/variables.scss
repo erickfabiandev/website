@@ -1,14 +1,14 @@
 /**Importamos el tipo de letra que vamos a utilizar para todo el proyecto */
 
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins&family=Permanent+Marker&display=swap");
 
-$font-PermanentMarker : 'Permanent Marker', cursive;
-$font-IndieFlower:'Indie Flower', cursive;
-$color-yellow:#E69C39;
+$font-PermanentMarker : 'Permanent Marker',
+cursive;
+$font-Poppins : 'Poppins',
+sans-serif;
+$font-IndieFlower: 'Indie Flower', cursive;
+$color-yellow: #E69C39;
 $color-yellow-2 :#FECE00;
-$color-black:#1F1C1C;
-$color-background:#F8F9F9;
-$color-gray:#565656;
-
-
- 
+$color-black: #1F1C1C;
+$color-background: #F8F9F9;
+$color-gray: #565656;
