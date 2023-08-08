@@ -26,8 +26,12 @@ const Home = () => {
           <p className='home__information__description'>Passionate about programming and the world of web development.
             I am excited to share my innovative projects and solutions. Lets program the future together!</p>
           <p className='home__information__redes'>
-            <a href='https://www.linkedin.com/in/erickfabiandev/'><BsLinkedin size={25} /></a>
-            <a href='https://github.com/erickfabiandev'><BsGithub size={25} /></a>
+            <a className='home__information__redes--linkedin' href='https://www.linkedin.com/in/erickfabiandev/'>
+              <BsLinkedin size={25} style={{ color: '#2874A6', background: '#FDFEFE' }} className='icon' />
+            </a>
+            <a className='home__information__redes--github' href='https://github.com/erickfabiandev'>
+              <BsGithub size={25} className='icon' />
+            </a>
             <i className='rocket'><BsFillRocketFill size={40} /></i>
           </p>
 
